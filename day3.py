@@ -1,11 +1,10 @@
 # Advent of Code 2020 - Day 3
 
-# Move each number from map.txt into a list called map
-with open('/Users/sonny/Desktop/map.txt', 'r') as file:
+# Move each number from day3.txt into a list called map
+with open('/Users/sonny/Desktop/aoc2020/day3.txt', 'r') as file:
     map = [line.strip()*2000 for line in file]
     # print(map[0])
     # print(map[1])
-    # print(map[2])
     # print(len(map))
 
 # Part 1

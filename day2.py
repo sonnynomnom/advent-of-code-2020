@@ -1,7 +1,7 @@
 # Advent of Code 2020 - Day 2
 
-# Move each number from expense.txt into a list called expenses
-with open('/Users/sonny/Desktop/passwords.txt', 'r') as file:
+# Move each number from day2.txt into a list called policy
+with open('/Users/sonny/Desktop/aoc2020/day2.txt', 'r') as file:
     policy = [line.strip() for line in file]
     # print(policy)
 
@@ -9,13 +9,10 @@ with open('/Users/sonny/Desktop/passwords.txt', 'r') as file:
 
 lowerbound = [int(line[0:line.find('-')]) for line in policy]
 # print(lowerbound)
-
 upperbound = [int(line[line.find('-')+1 : line.find(' ')]) for line in policy]
 # print(upperbound)
-
 alphabet = [line[line.find(' ')+1 : line.find(':')] for line in policy]
 # print(alphabet)
-
 passwords = [line[line.find(':')+2 : len(line)] for line in policy]
 # print(passwords)
 
@@ -26,7 +23,6 @@ for index in range(len(policy)):
     for character in passwords[index]: 
       if character == alphabet[index]:
         count += 1
-
     if count >= lowerbound[index] and count <= upperbound[index]:
         valid1 += 1
 
