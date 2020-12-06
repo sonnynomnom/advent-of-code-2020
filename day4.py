@@ -1,9 +1,9 @@
 # Advent of Code 2020 - Day 4
+# https://adventofcode.com/2020/day/4
 
 import re
 
-# Move each number from day4.txt into a list called passports
-# with open('/Users/sonny/Desktop/aoc2020/day4.txt', 'r') as file:
+# Move each paragragph from day4.txt into a list called passports
 
 f = open('/Users/sonny/Desktop/aoc2020/day4.txt', 'r')
 data = f.read()
@@ -18,12 +18,13 @@ for number, paragraph in enumerate(splat, 1):
 # print(passports[1])
 # print(passports[2])
 
-# Part 1
+# ========== Part 1 ==========
+
 # valid = 0
 # for passport in passports:
 #     if 'byr' in passport and 'iyr' in passport and 'eyr' in passport and 'hgt' in passport and 'hcl' in passport and 'ecl' in passport and 'pid' in passport:
 #        valid += 1
-# # print(valid)
+# print(valid)
 
 byr = []
 copy = ''

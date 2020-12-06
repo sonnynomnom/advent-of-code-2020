@@ -1,8 +1,6 @@
 # Advent of Code 2020 - Day 6
 # https://adventofcode.com/2020/day/6
 
-import math
-
 # Move each paragraph from day6.txt into a list called customs
 
 f = open('/Users/sonny/Desktop/aoc2020/day6.txt', 'r')
@@ -22,17 +20,17 @@ for number, paragraph in enumerate(splat, 1):
 
 # ========== Part 1 ==========
 
-# Take out \n
+# Take out '\n'
 customs_new = [group.replace('\n', '') for group in customs]
 
-print(customs_new[0])
-print(customs_new[1])
+# print(customs_new[0])
+# print(customs_new[1])
 
 # Get the unique characters
 customs_uniques = [list(set(group)) for group in customs_new]
 
-print(customs_uniques[0])
-print(customs_uniques[1])
+# print(customs_uniques[0])
+# print(customs_uniques[1])
 
 count1 = 0
 
