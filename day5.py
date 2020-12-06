@@ -1,4 +1,5 @@
 # Advent of Code 2020 - Day 5
+# https://adventofcode.com/2020/day/5
 
 import math
 
@@ -10,9 +11,10 @@ with open('/Users/sonny/Desktop/aoc2020/day5.txt', 'r') as file:
 # print(boarding_passes[0])
 # print(boarding_passes[1])
 # print(boarding_passes[2])
+
 # print(len(boarding_passes))    
 
-# Part 1
+# ========== Part 1 ==========
 
 # 128 rows (0-127)
 # 8 columns (0-7)
@@ -58,7 +60,7 @@ print(seat_ids)
 #            R        L        L
 # (0-7) -> (4-7) -> (4-5) -> (4-4)
 
-# Part 2
+# ========== Part 2 ==========
 
 seat_ids.sort()
 
