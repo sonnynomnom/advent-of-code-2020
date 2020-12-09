@@ -54,8 +54,8 @@ for x in range(1000):
     list.append(data[y])
 
     if len(list) > 2 and sum(list) == invalid:
+      list.sort() 
       print(list)
-      sorted = list.sort() 
       break
 
 print(714065 + 1248266) # Part 2: 1962331
