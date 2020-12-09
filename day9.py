@@ -40,7 +40,7 @@ for x in range(24, 1000):
   twentyfive.pop(0)
   twentyfive.append(data[x])
 
-# Correct: 14360655
+# Part 1: 14360655
 
 # ========== Part 2 ==========
 
@@ -56,9 +56,6 @@ for x in range(1000):
     if len(list) > 2 and sum(list) == invalid:
       print(list)
       sorted = list.sort() 
-      print(sorted)
       break
 
-new = [714065, 715497, 776112, 802598, 749876, 841964, 776204, 835117, 823680, 844572, 851440, 830638, 846284, 906078, 1248266, 880860, 917404]
-
-print(714065 + 1248266)
+print(714065 + 1248266) # Part 2: 1962331
