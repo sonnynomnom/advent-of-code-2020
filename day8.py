@@ -64,25 +64,25 @@ print('Part 1 Accumulator:', accumulator) # 2025
 # print(len(boot))           # 654
 # print(boot[653])           # jmp +1
 
-for x in range(654):
+for x in range(len(boot)):
   
   accumulator = 0
   index = 0
+
   previous_index2 = []
   previous_boot2 = []
 
   if boot[x][:3] == 'nop':
-     boot[x].replace('nop', 'jmp')
+    boot[x] = boot[x].replace('nop', 'jmp')
   elif boot[x][:3] == 'jmp':
-     boot[x].replace('jmp', 'nop')
+    boot[x] = boot[x].replace('jmp', 'nop')
 
   while index not in previous_index2:
+    
     previous_index2 += [index]
     previous_boot2 += [boot[index]]
-
-    if index == 653:
-      print('Part 2 Accumulator:', accumulator) 
-      break
+    # print(previous_index2)
+    # print(previous_boot2)
     
     if boot[index][:3] == 'acc':
       if boot[index][4] == '+':
@@ -96,16 +96,19 @@ for x in range(654):
         index += int(boot[index][5:])
       else:
         index -= int(boot[index][5:])
-
+    
     elif boot[index][:3] == 'nop':
       index += 1
-  
+    
+    if index == 653:
+      print("Part 2: Accumulator) 
+      break
+    
   if boot[x][:3] == 'jmp':
-    boot[x].replace('jmp', 'nop')
+    boot[x] = boot[x].replace('jmp', 'nop')
   elif boot[x][:3] == 'nop':
-    boot[x].replace('nop', 'jmp')
-
-
+    boot[x] = boot[x].replace('nop', 'jmp')
+  
 # print(previous_index2)
 # print(previous_boot2)
 # print('Part 2 Accumulator:', accumulator) # 1254, 127 too low. 2025, 3961 too high. 205 not right.
